@@ -1,0 +1,467 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#EEEEEE"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Symptom Checker"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#ffffff"
+        android:background="@color/green"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Please answer the question to the best of your knowledge"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/deathgrey"
+        android:layout_marginTop="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Feeling Nosy"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/running_nose"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/running_nose_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onRunningNose"/>
+                        <RadioButton android:id="@+id/running_nose_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onRunningNose"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Feeling Sneeze"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sneezing"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/sneezing_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onSneezing"/>
+                        <RadioButton android:id="@+id/sneezing_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onSneezing"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*Feeling Short Breath"
+                    android:textSize="20dp"
+                    android:textColor="@color/red"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="5dp"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/short_breath"
+                    android:layout_gravity="center"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <RadioButton android:id="@+id/short_breath_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Yes"
+                        android:textColor="@color/red"
+                        android:buttonTint="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginRight="20dp"
+                        android:onClick="onShortBreath"/>
+                    <RadioButton android:id="@+id/short_breath_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="No"
+                        android:textColor="@color/green"
+                        android:buttonTint="@color/green"
+                        android:checked="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:onClick="onShortBreath"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Feeling Cough"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/dry_cough"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/cough_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onDryCough"/>
+                        <RadioButton android:id="@+id/cough_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onDryCough"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Feeling Fever"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/fever"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/fever_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onFever"/>
+                        <RadioButton android:id="@+id/fever_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onFever"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*BAck Pain"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/back_pain"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/back_pain_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onBack_pain"/>
+                        <RadioButton android:id="@+id/back_pain_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onBack_pain"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Feeling Weakness"
+                        android:textSize="20dp"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="5dp"/>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:src="@drawable/weakness"
+                        android:layout_gravity="center"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <RadioButton android:id="@+id/weakness_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="Yes"
+                            android:textColor="@color/red"
+                            android:buttonTint="@color/red"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginRight="20dp"
+                            android:onClick="onWeakness"/>
+                        <RadioButton android:id="@+id/weakness_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="No"
+                            android:textColor="@color/green"
+                            android:buttonTint="@color/green"
+                            android:checked="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:onClick="onWeakness"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/green"
+                android:text="Get Results"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="20dp"
+                android:onClick="getsymptomresults"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#EEEEEE"
+    android:padding="20dp">
+
+    <!-- Profile -->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/default_profile_user"
+        android:id="@+id/profile_image"
+        app:civ_border_color="@color/darkblue"
+        android:onClick="user_profile"
+        android:layout_gravity="end"/>
+
+    <!--  Display Name  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textSize="25dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/deathgrey"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guest"
+            android:textSize="35dp"
+            android:id="@+id/user_text"
+            android:textColor="@color/deathgrey"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="4"
+                            android:layout_height="match_parent"
+                            android:text="COVID - 19 Cases Across "
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/lightred"/>
+
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/pie_chart"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Spinner
+                android:id="@+id/state_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:gravity="end" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:layout_margin="5dp"
+                                android:onClick="getstatedata"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="State Stats"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/state"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="5dp"
+                                android:layout_margin="5dp"
+                                android:onClick="getworlddata"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="World Stats"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/world"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:onClick="tips"
+                                android:layout_margin="5dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Tips"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/info"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:onClick="selfassesss"
+                                android:layout_margin="5dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Self Assess"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/doc"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:onClick="who_info"
+                                android:layout_margin="5dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="WHO Infographics"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/who"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:onClick="video_library"
+                                android:layout_margin="5dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Media"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/video_library"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <HorizontalScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp"
+                                android:onClick="dos_donts"
+                                android:layout_margin="5dp"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Dos And Don'ts"
+                                        android:textSize="20dp"
+                                        android:gravity="start"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textColor="#F3B63A"/>
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/dos"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginLeft="10dp"/>
+
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

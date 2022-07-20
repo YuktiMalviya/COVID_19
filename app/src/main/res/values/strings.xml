@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Covid19</string>
+    <string name="corona_into">Coronavirus disease (COVID -19) is an infectious disease caused by a new virus that had not been previously identified in humans. Please use the below options to learn more about the disease.</string>
+    <string name="forget_pass">Enter your email address that you used to register account. We will send you an email with a link to reset your password.</string>
+    <string name="low_risk">Your Infection Risk is low.Thank You for taking the assessment. </string>
+    <string name="high_risk">Your Infection Risk is High. Thank You for taking the assessment.We strongly recommend you take our Doctor Assistance under consult Doctor </string>
+    <string name="medium_risk">Your Infection Risk is Medium. Thank You for taking the assessment. </string>
+</resources>

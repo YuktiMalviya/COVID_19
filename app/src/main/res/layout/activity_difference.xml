@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Difference"
+    android:background="#EEEEEE"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Know More"
+        android:textSize="35dp"
+        android:id="@+id/user_text"
+        android:textColor="@color/yellow"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Symptoms"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Coronavirus"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cold"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Flu"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fever"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rare"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fatigue"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cough"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mild"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sneezing"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Aches and Pains"
+                        android:textColor="@color/blue"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:textColor="@color/green"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:textColor="@color/green"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Runny or Stuffy Nose"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Rare"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Common"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sore Throat"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sometimes"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diarrhea"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rare"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes in Children"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Headaches"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/blue"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sometimes"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/green"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="These data are being collected from Intermountain HealthCare"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EEEEEE"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".AdminActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Doctor"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:onClick="addDoc"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SignOut Admin"
+        android:layout_marginTop="20dp"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:onClick="adminsignout"/>
+
+</LinearLayout>

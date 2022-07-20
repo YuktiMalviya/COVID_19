@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddDoctor"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/blue"
+        android:hint="Name"
+        android:textColorHint="@color/grey"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        android:layout_marginTop="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doctorname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/person"
+            android:drawableTint="@color/blue"
+            android:drawablePaddingLeft="10dp"
+            android:drawablePaddingRight="10dp"
+            android:drawablePaddingTop="10dp"
+            android:drawablePaddingBottom="10dp"                   
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/blue"
+        android:hint="Email"
+        android:textColorHint="@color/grey"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        android:layout_marginTop="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doctoremail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/person"
+            android:drawableTint="@color/blue"
+            android:drawablePadding="10dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/blue"
+        android:hint="Password"
+        android:textColorHint="@color/grey"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        android:layout_marginTop="15dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doctorpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:inputType="textEmailAddress"
+            android:drawableLeft="@drawable/person"
+            android:drawableTint="@color/blue"
+            android:drawablePadding="10dp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/doctorcreate"
+        android:background="@drawable/login_back_btn"
+        android:layout_marginTop="15dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:onClick="registerdoc"
+        />
+
+</LinearLayout>
